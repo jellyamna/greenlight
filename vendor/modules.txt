@@ -15,6 +15,9 @@ github.com/lib/pq/scram
 # github.com/tomasen/realip v0.0.0-20180522021738-f0c99a92ddce
 ## explicit
 github.com/tomasen/realip
+# github.com/twinj/uuid v1.0.0
+## explicit
+github.com/twinj/uuid
 # golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
 ## explicit; go 1.17
 golang.org/x/crypto/bcrypt

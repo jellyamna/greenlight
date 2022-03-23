@@ -28,6 +28,8 @@ func (app *application) routes() http.Handler {
 	router.HandlerFunc(http.MethodGet, "/v1/rak", app.listRakHandler)
 	router.HandlerFunc(http.MethodGet, "/v1/brand", app.listBrandHandler)
 	router.HandlerFunc(http.MethodGet, "/v1/brandasset", app.listBrandAssetHandler)
+	router.HandlerFunc(http.MethodGet, "/v1/stok", app.listStokHandler)
+	//listStokHandler
 
 	router.HandlerFunc(http.MethodPost, "/v1/perusahaans", app.createPerusahaanHandler)
 	router.HandlerFunc(http.MethodPost, "/v1/movies", app.createMovieHandler)
@@ -35,9 +37,12 @@ func (app *application) routes() http.Handler {
 	router.HandlerFunc(http.MethodPost, "/v1/rak", app.createRakHandler)
 	router.HandlerFunc(http.MethodPost, "/v1/brand", app.createBrandHandler)
 	router.HandlerFunc(http.MethodPost, "/v1/brandasset", app.createBrandAssetHandler)
+	router.HandlerFunc(http.MethodPost, "/v1/stok", app.createStokHandler)
+	//createStokHandler
 
 	router.HandlerFunc(http.MethodGet, "/v1/movies/:id", app.showMovieHandler)
 	router.HandlerFunc(http.MethodGet, "/v1/rak/:id", app.showRakHandler)
+	router.HandlerFunc(http.MethodGet, "/v1/stok/:id", app.showStokHandler)
 	//router.HandlerFunc(http.MethodGet, "/v1/movies/:id", app.showMovieHandler)
 
 	router.HandlerFunc(http.MethodPatch, "/v1/movies/:id", app.updateMovieHandler)
@@ -46,6 +51,8 @@ func (app *application) routes() http.Handler {
 	router.HandlerFunc(http.MethodPatch, "/v1/rak/:id", app.updateRakHandler)
 	router.HandlerFunc(http.MethodPatch, "/v1/brand/:id", app.updateBrandHandler)
 	router.HandlerFunc(http.MethodPatch, "/v1/brandasset/:id", app.updateBrandAssetHandler)
+	router.HandlerFunc(http.MethodPatch, "/v1/stok/:id", app.updateStokHandler)
+	//updateStokHandler
 
 	router.HandlerFunc(http.MethodDelete, "/v1/movies/:id", app.deleteMovieHandler)
 	router.HandlerFunc(http.MethodDelete, "/v1/perusahaans/:id", app.deletePerusahaanHandler)
@@ -53,6 +60,9 @@ func (app *application) routes() http.Handler {
 	router.HandlerFunc(http.MethodDelete, "/v1/rak/:id", app.deleteRakHandler)
 	router.HandlerFunc(http.MethodDelete, "/v1/brand/:id", app.deleteBrandHandler)
 	router.HandlerFunc(http.MethodDelete, "/v1/brandasset/:id", app.deleteBrandAssetHandler)
+	router.HandlerFunc(http.MethodDelete, "/v1/stok/:id", app.deleteStokHandler)
+
+	//deleteStokHandler
 
 	router.HandlerFunc(http.MethodPost, "/v1/users", app.registerUserHandler)
 	router.HandlerFunc(http.MethodPut, "/v1/users/activated", app.activateUserHandler)

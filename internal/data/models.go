@@ -20,6 +20,7 @@ type Models struct {
 	Rak             RakModel
 	Brand           BrandModel
 	BrandAssetModel BrandAssetModel
+	Stok            StokModel
 }
 
 func NewModels(db *sql.DB) Models {
@@ -33,5 +34,6 @@ func NewModels(db *sql.DB) Models {
 		Rak:             RakModel{DB: db},
 		Brand:           BrandModel{DB: db},
 		BrandAssetModel: BrandAssetModel{DB: db},
+		Stok:            StokModel{DB: db},
 	}
 }
