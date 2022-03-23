@@ -4,3 +4,5 @@ https://stackoverflow.com/questions/41917033/no-go-to-definition-and-no-function
 
 LIMIT 3 OFFSET 1 --> artinya tampilkan 3 reoord, setelah urutan 1
 yang di tampilkan record 2 sampai totalnya 3 record.
+
+go run ./cmd/api -cors-trusted-origins="http://localhost:9000 http://localhost:5000 http://localhost:4000"
